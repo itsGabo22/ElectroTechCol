@@ -29,8 +29,8 @@ const backgroundImages: HeroBackgroundImage[] = [
     position: "object-center",
   },
   {
-    src: "/hero-ats-panel.jpg",
-    alt: "Tablero de transferencia automática con cableado técnico",
+    src: "/hero-smart-energy.jpg",
+    alt: "Infraestructura energetica con ciudad, paneles solares, tableros y generador",
     opacityRange: [340, 520, 700],
     opacityValue: [0, 1, 0],
     position: "object-center",
@@ -79,9 +79,10 @@ export function HeroBackground() {
       {backgroundImages.map((image, index) => (
         <BackgroundLayer key={image.src} image={image} index={index} />
       ))}
-      <div className="absolute inset-0 bg-gradient-to-r from-anthracite/90 via-industrial-blue/60 to-anthracite/20" />
-      <div className="absolute inset-0 bg-gradient-to-t from-anthracite/82 via-transparent to-anthracite/20" />
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_24%_44%,rgba(12,24,36,0.86)_0%,rgba(12,24,36,0.58)_34%,rgba(12,24,36,0.12)_62%,transparent_78%)]" />
+      {/* Lower these overlay opacity values to make the backgrounds more visible. */}
+      <div className="absolute inset-0 bg-gradient-to-r from-anthracite/82 via-industrial-blue/45 to-anthracite/10" />
+      <div className="absolute inset-0 bg-gradient-to-t from-anthracite/72 via-transparent to-anthracite/10" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_24%_44%,rgba(12,24,36,0.78)_0%,rgba(12,24,36,0.48)_34%,rgba(12,24,36,0.08)_62%,transparent_78%)]" />
     </div>
   );
 }
