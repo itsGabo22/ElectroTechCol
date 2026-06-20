@@ -20,10 +20,10 @@ export function HeroMedia() {
     >
       <div className="relative aspect-[4/3] overflow-hidden rounded-xl border border-white/20 bg-anthracite/50 shadow-2xl backdrop-blur-sm">
         <Image
-          src="/hero-generator-room.png"
+          src="/hero-ats-panel.jpg"
           alt={heroContent.imageAlt}
           fill
-          priority
+          quality={82}
           sizes="(min-width: 768px) 50vw, 100vw"
           className="object-cover"
         />
