@@ -1,13 +1,15 @@
-import Image from "next/image";
 import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
 import { MotionReveal } from "@/components/ui/Motion";
+import { HeroBackground } from "@/components/sections/Hero/HeroBackground";
+import { HeroMedia } from "@/components/sections/Hero/HeroMedia";
 import { heroContent } from "@/lib/constants";
 
 export function Hero() {
   return (
-    <section id="inicio" className="relative overflow-hidden bg-gradient-to-br from-industrial-blue via-[#123f5e] to-anthracite pt-32 text-white sm:pt-36">
-      <Container className="relative grid min-h-[760px] items-center gap-12 pb-20 md:grid-cols-[1.02fr_0.98fr] lg:pb-24">
+    <section id="inicio" className="relative isolate overflow-hidden bg-anthracite pt-32 text-white sm:pt-36">
+      <HeroBackground />
+      <Container className="relative z-10 grid min-h-[760px] items-center gap-12 pb-20 md:grid-cols-[1.02fr_0.98fr] lg:pb-24">
         <MotionReveal>
           <p className="text-sm font-bold uppercase tracking-[0.16em] text-electric-orange">{heroContent.eyebrow}</p>
           <h1 className="mt-5 max-w-3xl text-4xl font-black leading-tight tracking-normal sm:text-5xl lg:text-6xl">
@@ -21,21 +23,7 @@ export function Hero() {
             </Button>
           </div>
         </MotionReveal>
-        <MotionReveal className="relative">
-          <div className="relative aspect-[4/3] overflow-hidden rounded-xl border border-white/15 bg-white/10 shadow-2xl">
-            <Image
-              src="/industrial-hero.svg"
-              alt={heroContent.imageAlt}
-              fill
-              priority
-              sizes="(min-width: 768px) 50vw, 100vw"
-              className="object-cover"
-            />
-          </div>
-          <div className="absolute -bottom-5 left-6 right-6 rounded-xl border border-white/15 bg-anthracite/90 p-4 shadow-soft backdrop-blur">
-            <p className="text-sm font-semibold text-white/90">Control, potencia y continuidad energética en un solo enfoque.</p>
-          </div>
-        </MotionReveal>
+        <HeroMedia />
       </Container>
     </section>
   );
