@@ -1,48 +1,49 @@
 import { NextResponse } from "next/server";
+import { Resend } from "resend";
+import { z } from "zod";
 
-type ContactRequest = {
-  name: string;
-  email: string;
-  phone: string;
-  message: string;
-};
-
-function isContactRequest(value: unknown): value is ContactRequest {
-  if (typeof value !== "object" || value === null) {
-    return false;
-  }
-
-  const candidate = value as Record<string, unknown>;
-  return (
-    typeof candidate.name === "string" &&
-    typeof candidate.email === "string" &&
-    typeof candidate.phone === "string" &&
-    typeof candidate.message === "string" &&
-    candidate.name.trim().length >= 2 &&
-    /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(candidate.email) &&
-    candidate.phone.trim().length >= 7 &&
-    candidate.message.trim().length >= 10
-  );
-}
-
-async function sendContactEmail(payload: ContactRequest): Promise<void> {
-  void payload;
-  // Connect Resend, SendGrid, SMTP or another provider here.
-}
+const contactSchema = z.object({
+  name: z.string().trim().min(2, "Name is too short"),
+  email: z.string().trim().email("Invalid email"),
+  phone: z.string().trim().optional(),
+  message: z.string().trim().min(10, "Message is too short"),
+});
 
 export async function POST(request: Request) {
-  const body: unknown = await request.json().catch(() => null);
+  try {
+    const resend = new Resend(process.env.RESEND_API_KEY);
+    const body: unknown = await request.json().catch(() => null);
+    
+    if (!body) {
+      return NextResponse.json({ error: "Invalid JSON" }, { status: 400 });
+    }
 
-  if (!isContactRequest(body)) {
-    return NextResponse.json({ message: "Invalid contact request" }, { status: 400 });
+    const parsed = contactSchema.safeParse(body);
+
+    if (!parsed.success) {
+      return NextResponse.json(
+        { error: "Invalid contact request", details: parsed.error.format() },
+        { status: 400 }
+      );
+    }
+
+    const { name, email, phone, message } = parsed.data;
+
+    const { error, data } = await resend.emails.send({
+      from: "Acme <onboarding@resend.dev>",
+      to: ["delivered@resend.dev"],
+      subject: `Nuevo mensaje de contacto de ${name}`,
+      text: `Nombre: ${name}\nEmail: ${email}\nTeléfono: ${phone || "No provisto"}\n\nMensaje:\n${message}`,
+    });
+
+    if (error) {
+      console.error("Resend API error:", error);
+      return NextResponse.json({ error: "Failed to send email" }, { status: 500 });
+    }
+
+    return NextResponse.json({ message: "Contact request received", data }, { status: 200 });
+  } catch (error) {
+    console.error("Unexpected error handling contact request:", error);
+    return NextResponse.json({ error: "Internal server error" }, { status: 500 });
   }
-
-  await sendContactEmail({
-    name: body.name.trim(),
-    email: body.email.trim(),
-    phone: body.phone.trim(),
-    message: body.message.trim(),
-  });
-
-  return NextResponse.json({ message: "Contact request received" });
 }

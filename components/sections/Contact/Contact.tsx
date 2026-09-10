@@ -100,9 +100,7 @@ export function Contact() {
               <label className="grid gap-2 text-sm font-semibold text-anthracite sm:col-span-2">
                 {contactContent.fields.phone}
                 <input
-                  required
                   type="tel"
-                  minLength={7}
                   value={payload.phone}
                   onChange={(event) => updateField("phone", event.target.value)}
                   className="min-h-12 rounded-xl border border-slate-200 px-4 outline-none transition focus:border-industrial-blue"

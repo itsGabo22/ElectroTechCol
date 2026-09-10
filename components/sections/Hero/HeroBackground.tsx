@@ -16,7 +16,7 @@ const backgroundImages: HeroBackgroundImage[] = [
   {
     src: "/hero-energy-site.jpg",
     alt: "Sistema de respaldo energético con paneles solares al atardecer",
-    opacityRange: [0, 180],
+    opacityRange: [0, 115],
     opacityValue: [1, 0],
     priority: true,
     position: "object-center",
@@ -24,21 +24,21 @@ const backgroundImages: HeroBackgroundImage[] = [
   {
     src: "/hero-generator-room.jpg",
     alt: "Sala técnica con generador industrial y tablero de control",
-    opacityRange: [90, 260, 430],
+    opacityRange: [70, 165, 260],
     opacityValue: [0, 1, 0],
     position: "object-center",
   },
   {
     src: "/hero-smart-energy.jpg",
     alt: "Infraestructura energetica con ciudad, paneles solares, tableros y generador",
-    opacityRange: [340, 520, 700],
+    opacityRange: [210, 315, 420],
     opacityValue: [0, 1, 0],
     position: "object-center",
   },
   {
     src: "/hero-solar-field.jpg",
     alt: "Campo solar industrial con montañas y luz de atardecer",
-    opacityRange: [610, 820],
+    opacityRange: [370, 520],
     opacityValue: [0, 1],
     position: "object-center",
   },
@@ -48,8 +48,8 @@ function BackgroundLayer({ image, index }: { image: HeroBackgroundImage; index: 
   const reduceMotion = useReducedMotion();
   const { scrollY } = useScroll();
   const opacity = useTransform(scrollY, image.opacityRange, image.opacityValue);
-  const y = useTransform(scrollY, [0, 820], [index * -8, -72 + index * 10]);
-  const scale = useTransform(scrollY, [0, 820], [1.04, 1.1]);
+  const y = useTransform(scrollY, [0, 520], [index * -8, -52 + index * 8]);
+  const scale = useTransform(scrollY, [0, 520], [1.035, 1.085]);
 
   return (
     <motion.div
