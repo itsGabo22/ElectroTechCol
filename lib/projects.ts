@@ -1,6 +1,9 @@
+import { groq } from "next-sanity";
+import { client } from "./sanity/client";
 import type { Project } from "@/types";
 
-export const projects: Project[] = [
+// Mock data to simulate a successful Sanity fetch when credentials are not present
+const MOCK_PROJECTS: Project[] = [
   {
     id: "p1",
     title: "Implementación ATS y Respaldo",
@@ -26,3 +29,24 @@ export const projects: Project[] = [
     year: "2025",
   },
 ];
+
+export async function getProjects(): Promise<Project[]> {
+  // If no project ID is configured, return the mock data to simulate successful fetch
+  if (!process.env.NEXT_PUBLIC_SANITY_PROJECT_ID) {
+    // For testing empty state, you can return [] here.
+    return MOCK_PROJECTS;
+  }
+
+  // Strict GROQ query to project Sanity fields into our exact TypeScript interface shape.
+  // Resolves the image URL directly inside GROQ using `image.asset->url`.
+  const query = groq`*[_type == "project"] | order(year desc) {
+    "id": _id,
+    title,
+    category,
+    "image": image.asset->url,
+    description,
+    year
+  }`;
+
+  return client.fetch<Project[]>(query);
+}

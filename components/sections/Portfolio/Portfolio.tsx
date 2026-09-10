@@ -7,9 +7,10 @@ import { MotionItem, MotionReveal } from "@/components/ui/Motion";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { fadeInUp } from "@/lib/animations";
 import { portfolioContent } from "@/lib/constants";
-import { projects } from "@/lib/projects";
+import { getProjects } from "@/lib/projects";
 
-export function Portfolio() {
+export async function Portfolio() {
+  const projects = await getProjects();
   return (
     <section id="portafolio" className="bg-white py-20 sm:py-24">
       <Container>
