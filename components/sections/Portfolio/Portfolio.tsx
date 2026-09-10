@@ -28,7 +28,7 @@ export function Portfolio() {
             </Button>
           </MotionReveal>
         ) : (
-          <MotionReveal stagger className="mt-12 grid gap-5 md:grid-cols-3">
+          <MotionReveal stagger className="mt-12 grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
             {projects.map((project) => (
               <MotionItem key={project.id} variants={fadeInUp}>
                 <Card className="overflow-hidden p-0">
