@@ -16,15 +16,12 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL(site.domain),
   title: {
-    default: "ElectroTech | Electromecánica y Automatización Industrial",
-    template: "%s | ElectroTech",
+    default: `${site.name} | Soluciones Electromecánicas y Automatización`,
+    template: `%s | ${site.name}`,
   },
   description: site.description,
-  alternates: {
-    canonical: "/",
-  },
   openGraph: {
-    title: "ElectroTech | Electromecánica y Automatización Industrial",
+    title: `${site.name} | Soluciones Electromecánicas y Automatización`,
     description: site.description,
     url: site.domain,
     siteName: site.name,
@@ -37,20 +34,25 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({ children }: Readonly<{ children: ReactNode }>) {
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     name: site.name,
+    description: site.description,
     url: site.domain,
-    email: site.email,
     telephone: site.phone,
+    email: site.email,
     address: {
       "@type": "PostalAddress",
+      addressLocality: site.location,
       addressCountry: "CO",
     },
-    areaServed: "Colombia",
-    description: site.description,
+    sameAs: Object.values(site.social),
   };
 
   return (

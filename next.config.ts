@@ -10,6 +10,13 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+  webpack: (config) => {
+    config.ignoreWarnings = [
+      { module: /node_modules\/@sanity/ },
+      { message: /export 'Activity' \(imported as 'Activity'\) was not found in 'react'/ }
+    ];
+    return config;
+  },
 };
 
 export default nextConfig;
