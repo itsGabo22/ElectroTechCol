@@ -1,19 +1,10 @@
-/**
- * This route is responsible for the built-in authoring environment using Sanity Studio.
- * All routes under your studio path is handled by this file using Next.js' catch-all routes:
- * https://nextjs.org/docs/routing/dynamic-routes#catch-all-routes
- *
- * You can learn more about the next-sanity package here:
- * https://github.com/sanity-io/next-sanity
- */
-
-import { NextStudio } from 'next-sanity/studio'
-import config from '../../../sanity.config'
-
-export const dynamic = 'force-static'
-
-export { metadata, viewport } from 'next-sanity/studio'
-
+export const dynamic = 'force-static';
 export default function StudioPage() {
-  return <NextStudio config={config} />
+  return (
+    <div style={{ padding: '2rem', fontFamily: 'sans-serif' }}>
+      <h1>Sanity Studio (Temporarily Disabled)</h1>
+      <p>The embedded Sanity Studio is temporarily disabled due to a known incompatibility between Sanity UI and Next.js 15 (React 19 missing &apos;Activity&apos; export).</p>
+      <p>To manage your content, please run <strong>npx sanity start</strong> locally in your terminal.</p>
+    </div>
+  );
 }

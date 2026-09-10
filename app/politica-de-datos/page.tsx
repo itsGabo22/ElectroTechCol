@@ -1,13 +1,12 @@
-﻿import { Container } from "@/components/ui/Container";
-import { site } from "@/lib/constants";
-import type { Metadata } from "next";
+﻿import { Container } from '@/components/ui/Container';
+import { site } from '@/lib/constants';
 
-export const metadata: Metadata = {
-  title: "Política de Privacidad y Datos",
-  description: `Política de Tratamiento de Datos Personales de ${site.name} conforme a la Ley 1581 de 2012.`,
+export const metadata = {
+  title: 'Política de Tratamiento de Datos - ElectroTech',
+  description: 'Conozca nuestra política de privacidad y tratamiento de datos personales conforme a la Ley 1581 de 2012 de Colombia.',
 };
 
-export default function DataPolicyPage() {
+export default function PoliticaDatosPage() {
   return (
     <section className="bg-slate-50 pb-20 pt-32 min-h-screen">
       <Container className="max-w-4xl">
@@ -31,35 +30,45 @@ export default function DataPolicyPage() {
 
           <h2 className="text-2xl font-bold text-slate-900 mt-8 mb-4">3. Finalidad del Tratamiento</h2>
           <p>
-            Los datos personales recopilados a través de nuestro sitio web, formularios de contacto, o canales de atención serán utilizados para las siguientes finalidades:
+            Los datos personales que recopilamos a través de nuestro formulario de contacto, correo electrónico o llamadas telefónicas serán utilizados para las siguientes finalidades:
           </p>
-          <ul className="list-disc pl-6 space-y-2 marker:text-slate-400">
-            <li>Dar respuesta a solicitudes de cotización, diagnóstico o información técnica de nuestros servicios.</li>
-            <li>Coordinar visitas técnicas, mantenimiento de equipos y desarrollo de proyectos electromecánicos y de automatización.</li>
-            <li>Gestión administrativa, contable, de facturación y soporte post-venta.</li>
-            <li>Evaluar la calidad de nuestros servicios y enviar información sobre innovaciones técnicas que puedan ser de interés.</li>
+          <ul className="list-disc pl-6 space-y-2">
+            <li>Atender solicitudes, peticiones, quejas o reclamos (PQRS).</li>
+            <li>Gestionar las cotizaciones y propuestas comerciales solicitadas.</li>
+            <li>Proveer información sobre nuestros servicios de ingeniería y mantenimiento.</li>
+            <li>Envío de comunicaciones relacionadas con el servicio contratado, facturación y gestión administrativa.</li>
+            <li>Evaluar la calidad de nuestros servicios y realizar encuestas de satisfacción.</li>
           </ul>
 
           <h2 className="text-2xl font-bold text-slate-900 mt-8 mb-4">4. Derechos de los Titulares</h2>
           <p>
-            Como titular de los datos personales, usted tiene los siguientes derechos:
+            De conformidad con el artículo 8 de la Ley 1581 de 2012, los titulares de la información tienen derecho a:
           </p>
-          <ul className="list-disc pl-6 space-y-2 marker:text-slate-400">
-            <li>Conocer, actualizar y rectificar sus datos personales frente a los Responsables del Tratamiento o Encargados del Tratamiento.</li>
-            <li>Solicitar prueba de la autorización otorgada al Responsable del Tratamiento salvo cuando expresamente se exceptúe como requisito para el Tratamiento.</li>
-            <li>Ser informado por el Responsable del Tratamiento o el Encargado del Tratamiento, previa solicitud, respecto del uso que le ha dado a sus datos personales.</li>
-            <li>Presentar ante la Superintendencia de Industria y Comercio quejas por infracciones a lo dispuesto en la presente ley y las demás normas que la modifiquen, adicionen o complementen.</li>
-            <li>Revocar la autorización y/o solicitar la supresión del dato cuando en el Tratamiento no se respeten los principios, derechos y garantías constitucionales y legales.</li>
+          <ul className="list-disc pl-6 space-y-2">
+            <li><strong>Conocer, actualizar y rectificar</strong> sus datos personales frente a {site.name}.</li>
+            <li><strong>Solicitar prueba de la autorización</strong> otorgada para el tratamiento de sus datos.</li>
+            <li>Ser informado sobre el <strong>uso</strong> que se ha dado a sus datos personales.</li>
+            <li><strong>Presentar quejas</strong> ante la Superintendencia de Industria y Comercio (SIC) por infracciones a la normativa.</li>
+            <li><strong>Revocar la autorización</strong> y/o solicitar la supresión del dato cuando en el tratamiento no se respeten los principios, derechos y garantías constitucionales y legales.</li>
+            <li><strong>Acceder en forma gratuita</strong> a sus datos personales que hayan sido objeto de Tratamiento.</li>
           </ul>
 
           <h2 className="text-2xl font-bold text-slate-900 mt-8 mb-4">5. Procedimiento para Consultas y Reclamos</h2>
           <p>
-            Los titulares de la información podrán ejercer sus derechos a través de una solicitud escrita enviada al correo electrónico <strong className="text-slate-900">{site.email}</strong>. La solicitud debe incluir la identificación del titular, la descripción de los hechos que dan lugar al reclamo, la dirección y los documentos que se quiera hacer valer.
+            Los titulares de la información podrán ejercer sus derechos enviando una solicitud formal al correo electrónico: <strong className="text-slate-900">{site.email}</strong>.
+          </p>
+          <p>
+            La solicitud debe contener: el nombre y documento de identificación del Titular, la descripción de los hechos que dan lugar al reclamo, la dirección y los documentos adjuntos pertinentes. {site.name} atenderá la petición en un plazo máximo de quince (15) días hábiles, contados a partir de la recepción de la misma.
           </p>
 
-          <h2 className="text-2xl font-bold text-slate-900 mt-8 mb-4">6. Vigencia de la Política y Bases de Datos</h2>
+          <h2 className="text-2xl font-bold text-slate-900 mt-8 mb-4">6. Seguridad de la Información</h2>
           <p>
-            La presente Política rige a partir de su publicación en el sitio web <strong className="text-slate-900">{site.domain}</strong>. Las bases de datos tendrán una vigencia igual al tiempo en que se mantenga y utilice la información para las finalidades descritas.
+            {site.name} ha adoptado las medidas técnicas, humanas y administrativas necesarias para garantizar la seguridad de los datos personales, previniendo su adulteración, pérdida, consulta, uso o acceso no autorizado o fraudulento.
+          </p>
+
+          <h2 className="text-2xl font-bold text-slate-900 mt-8 mb-4">7. Vigencia</h2>
+          <p>
+            La presente política rige a partir de la fecha de su publicación en este sitio web. Las bases de datos tendrán una vigencia igual al tiempo en que se mantenga y utilice la información para las finalidades descritas en esta política.
           </p>
         </div>
       </Container>

@@ -1,10 +1,9 @@
-﻿import { Container } from "@/components/ui/Container";
-import { site } from "@/lib/constants";
-import type { Metadata } from "next";
+﻿import { Container } from '@/components/ui/Container';
+import { site } from '@/lib/constants';
 
-export const metadata: Metadata = {
-  title: "Aviso Legal",
-  description: `Aviso Legal y Condiciones de Uso del sitio web de ${site.name}.`,
+export const metadata = {
+  title: 'Aviso Legal - ElectroTech',
+  description: 'Términos, condiciones y aviso legal del sitio web de ElectroTech.',
 };
 
 export default function AvisoLegalPage() {
@@ -15,7 +14,7 @@ export default function AvisoLegalPage() {
         <div className="bg-white p-8 sm:p-12 rounded-2xl shadow-sm border border-slate-100 text-slate-700 leading-relaxed space-y-6">
           <h2 className="text-2xl font-bold text-slate-900 mt-8 mb-4">1. Información Legal y Aceptación</h2>
           <p>
-            El presente aviso legal regula el uso y acceso al sitio web <strong className="text-slate-900">{site.domain}</strong> (en adelante, el "Sitio Web"), del cual es titular <strong className="text-slate-900">{site.name}</strong>, empresa dedicada a la prestación de servicios de ingeniería, electromecánica, automatización industrial y mantenimiento en el territorio de la República de Colombia.
+            El presente aviso legal regula el uso y acceso al sitio web <strong className="text-slate-900">{site.domain}</strong> (en adelante, el &quot;Sitio Web&quot;), del cual es titular <strong className="text-slate-900">{site.name}</strong>, empresa dedicada a la prestación de servicios de ingeniería, electromecánica, automatización industrial y mantenimiento en el territorio de la República de Colombia.
           </p>
           <p>
             La navegación por el Sitio Web atribuye la condición de usuario e implica la aceptación plena y sin reservas de todas y cada una de las disposiciones incluidas en este Aviso Legal, que pueden sufrir modificaciones.
@@ -29,17 +28,17 @@ export default function AvisoLegalPage() {
             Las marcas, nombres comerciales o signos distintivos son titularidad de <strong className="text-slate-900">{site.name}</strong> o de terceros con autorización, sin que el acceso al Sitio Web atribuya ningún derecho sobre las citadas marcas, nombres comerciales y/o signos distintivos.
           </p>
 
-          <h2 className="text-2xl font-bold text-slate-900 mt-8 mb-4">3. Condiciones de Uso del Portal</h2>
+          <h2 className="text-2xl font-bold text-slate-900 mt-8 mb-4">3. Exclusión de Responsabilidad</h2>
           <p>
-            El usuario se obliga a hacer un uso correcto del Sitio Web de conformidad con las leyes, la buena fe, el orden público, los usos del tráfico y el presente Aviso Legal. El usuario responderá frente a <strong className="text-slate-900">{site.name}</strong> o frente a terceros de cualesquiera daños y perjuicios que pudieran causarse como consecuencia del incumplimiento de dicha obligación.
-          </p>
-          
-          <h2 className="text-2xl font-bold text-slate-900 mt-8 mb-4">4. Exclusión de Responsabilidad</h2>
-          <p>
-            El contenido del presente Sitio Web es de carácter general y tiene una finalidad meramente informativa. <strong className="text-slate-900">{site.name}</strong> no se hace responsable de las decisiones tomadas a partir de la información suministrada en el Sitio Web ni de los daños y perjuicios que en el usuario o terceros puedan derivarse debido a la interrupción de las redes de telecomunicaciones.
+            El contenido del presente sitio web es de carácter general y tiene una finalidad meramente informativa. <strong className="text-slate-900">{site.name}</strong> no garantiza plenamente el acceso a todos los contenidos, ni su exhaustividad, corrección, vigencia o actualidad, ni su idoneidad o utilidad para un objetivo específico.
           </p>
           <p>
-            Los esquemas técnicos, diagramas o estimaciones expuestos son referenciales y bajo ninguna circunstancia sustituyen una evaluación, diseño técnico, diagnóstico presencial o intervención ejecutada por un profesional cualificado.
+            <strong className="text-slate-900">{site.name}</strong> excluye, hasta donde permite el ordenamiento jurídico colombiano, cualquier responsabilidad por los daños y perjuicios de toda naturaleza derivados de la imposibilidad de acceso al sitio web, la presencia de virus en los contenidos, o el incumplimiento de las leyes, la buena fe y el orden público como consecuencia de un uso incorrecto del sitio web.
+          </p>
+
+          <h2 className="text-2xl font-bold text-slate-900 mt-8 mb-4">4. Modificaciones</h2>
+          <p>
+            <strong className="text-slate-900">{site.name}</strong> se reserva el derecho de modificar el presente Aviso Legal en cualquier momento. Las modificaciones entrarán en vigor a partir de su publicación en el sitio web. El uso continuo del sitio web implicará su aceptación de dichas modificaciones. Para dudas adicionales, puede contactarnos en el correo <strong className="text-slate-900">{site.email}</strong>.
           </p>
 
           <h2 className="text-2xl font-bold text-slate-900 mt-8 mb-4">5. Legislación y Jurisdicción Aplicable</h2>
