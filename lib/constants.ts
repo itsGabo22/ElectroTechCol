@@ -12,11 +12,11 @@ import type {
 
 export const site = {
   name: "ElectroTech",
-  domain: "https://electrotech.com.co",
+  domain: "https://electrotechpasto.com",
   description:
     "Soluciones de electromecánica, automatización industrial, tableros eléctricos, energía de respaldo y mantenimiento para industria y hogar en Colombia.",
   phone: "+57 317 745 7774",
-  email: "contacto@electrotech.com.co",
+  email: "contacto@electrotechpasto.com",
   location: "Colombia",
   whatsapp: "573177457774",
   social: {

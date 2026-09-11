@@ -177,7 +177,7 @@ Pendiente:
 - Revisar keywords reales.
 - Ajustar title y description finales.
 - Agregar imagen Open Graph real.
-- Confirmar dominio final `https://electrotech.com.co`.
+- Confirmar dominio final `https://electrotechpasto.com`.
 - Validar JSON-LD con datos reales.
 - Revisar indexacion y sitemap al desplegar.
 
@@ -202,7 +202,7 @@ Pendiente:
 
 - Crear proyecto en Vercel.
 - Configurar variables de entorno.
-- Conectar dominio `electrotech.com.co`.
+- Conectar dominio `electrotechpasto.com`.
 - Configurar DNS.
 - Probar HTTPS.
 - Validar rutas:
