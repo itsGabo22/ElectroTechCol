@@ -15,10 +15,10 @@ export const site = {
   domain: "https://electrotech.com.co",
   description:
     "Soluciones de electromecánica, automatización industrial, tableros eléctricos, energía de respaldo y mantenimiento para industria y hogar en Colombia.",
-  phone: "+57 300 000 0000",
+  phone: "+57 317 745 7774",
   email: "contacto@electrotech.com.co",
   location: "Colombia",
-  whatsapp: "573000000000",
+  whatsapp: "573177457774",
   social: {
     linkedin: "https://www.linkedin.com/company/electrotech",
     instagram: "https://www.instagram.com/electrotech",
