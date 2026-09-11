@@ -17,12 +17,8 @@ export const site = {
     "Soluciones de electromecánica, automatización industrial, tableros eléctricos, energía de respaldo y mantenimiento para industria y hogar en Colombia.",
   phone: "+57 317 745 7774",
   email: "contacto@electrotechpasto.com",
-  location: "Colombia",
+  location: "Pasto, Nariño, Colombia",
   whatsapp: "573177457774",
-  social: {
-    linkedin: "https://www.linkedin.com/company/electrotech",
-    instagram: "https://www.instagram.com/electrotech",
-  },
 } as const;
 
 export const navItems: NavItem[] = [

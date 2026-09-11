@@ -51,8 +51,7 @@ export default function RootLayout({
       "@type": "PostalAddress",
       addressLocality: site.location,
       addressCountry: "CO",
-    },
-    sameAs: Object.values(site.social),
+    }
   };
 
   return (

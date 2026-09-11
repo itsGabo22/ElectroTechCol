@@ -30,12 +30,6 @@ export function Footer() {
               <Link href="/politica-de-datos" className="transition hover:text-white">
                 Política de datos
               </Link>
-              <a href={site.social.linkedin} className="transition hover:text-white">
-                LinkedIn
-              </a>
-              <a href={site.social.instagram} className="transition hover:text-white">
-                Instagram
-              </a>
             </div>
           </div>
         </div>
