@@ -47,10 +47,9 @@ export const heroContent = {
 } as const;
 
 export const trustMetrics: TrustMetric[] = [
-  { value: "10+", label: "años de experiencia técnica" },
-  { value: "120+", label: "proyectos ejecutados" },
+  { value: "15+", label: "años de experiencia técnica" },
   { value: "24h", label: "respuesta inicial prioritaria" },
-  { value: "45+", label: "clientes atendidos" },
+  { value: "3", label: "departamentos atendidos" },
 ];
 
 export const sectionHeadings = {
