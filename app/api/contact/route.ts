@@ -30,8 +30,9 @@ export async function POST(request: Request) {
     const { name, email, phone, message } = parsed.data;
 
     const { error, data } = await resend.emails.send({
-      from: "Acme <onboarding@resend.dev>",
-      to: ["delivered@resend.dev"],
+      from: "Web ElectroTech <no-reply@electrotechpasto.com>",
+      to: ["contacto@electrotechpasto.com"],
+      replyTo: email,
       subject: `Nuevo mensaje de contacto de ${name}`,
       text: `Nombre: ${name}\nEmail: ${email}\nTeléfono: ${phone || "No provisto"}\n\nMensaje:\n${message}`,
     });
