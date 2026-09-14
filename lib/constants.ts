@@ -24,9 +24,6 @@ export const site = {
 export const navItems: NavItem[] = [
   { label: "Inicio", href: "#inicio" },
   { label: "Servicios", href: "#servicios" },
-  { label: "Especialidades", href: "#especialidades" },
-  { label: "Portafolio", href: "#portafolio" },
-  { label: "Garantías", href: "#garantias" },
   { label: "Testimonios", href: "#testimonios" },
   { label: "Contacto", href: "#contacto" },
 ];
