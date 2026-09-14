@@ -10,7 +10,7 @@ export function Footer() {
         <div className="grid gap-10 md:grid-cols-[1.4fr_1fr_1fr]">
           <div>
             <div className="inline-flex items-center text-white">
-              <Logo className="h-10 w-auto text-white" />
+              <Logo className="h-16 w-auto text-white" />
             </div>
             <p className="mt-4 max-w-md text-sm leading-6 text-white/70">{site.description}</p>
           </div>

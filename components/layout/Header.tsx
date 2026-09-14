@@ -10,7 +10,7 @@ export function Header() {
     <header className="site-header fixed left-0 right-0 top-0 z-50 border-b border-white/15">
       <Container className="flex h-20 items-center justify-between">
         <Link href="#inicio" className="flex items-center gap-2 text-white hover:opacity-90 transition-opacity" aria-label="ElectroTech inicio">
-          <Logo className="h-8 w-auto text-white" />
+          <Logo className="h-12 w-auto text-white" />
         </Link>
         <nav aria-label="Navegación principal" className="hidden items-center gap-6 lg:flex">
           {navItems.map((item) => (
