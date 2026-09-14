@@ -17,8 +17,8 @@ export function Hero() {
           </h1>
           <p className="mt-6 max-w-2xl text-lg leading-8 text-white/80">{heroContent.description}</p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-            <Button href="#contacto">{heroContent.primaryCta}</Button>
-            <Button href="#servicios" variant="secondary">
+            <Button href="/#contacto">{heroContent.primaryCta}</Button>
+            <Button href="/#servicios" variant="secondary">
               {heroContent.secondaryCta}
             </Button>
           </div>

@@ -22,10 +22,10 @@ export const site = {
 } as const;
 
 export const navItems: NavItem[] = [
-  { label: "Inicio", href: "#inicio" },
-  { label: "Servicios", href: "#servicios" },
-  { label: "Testimonios", href: "#testimonios" },
-  { label: "Contacto", href: "#contacto" },
+  { label: "Inicio", href: "/" },
+  { label: "Servicios", href: "/#servicios" },
+  { label: "Testimonios", href: "/#testimonios" },
+  { label: "Contacto", href: "/#contacto" },
 ];
 
 export const heroContent = {

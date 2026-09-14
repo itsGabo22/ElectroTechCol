@@ -36,7 +36,7 @@ export function MobileMenu() {
             </Link>
           ))}
           <Link
-            href="#contacto"
+            href="/#contacto"
             onClick={() => setOpen(false)}
             className="mt-2 rounded-xl bg-electric-orange px-4 py-3 text-center text-sm font-bold text-white"
           >
