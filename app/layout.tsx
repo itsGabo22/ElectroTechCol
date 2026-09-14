@@ -20,6 +20,16 @@ export const metadata: Metadata = {
     template: `%s | ${site.name}`,
   },
   description: site.description,
+  keywords: [
+    "ElectroTech Pasto",
+    "ElectroTech Nariño",
+    "Electromecánica Pasto",
+    "Automatización industrial Pasto",
+    "Tableros eléctricos Pasto",
+    "Mantenimiento eléctrico Nariño",
+    "Ingeniería eléctrica Pasto",
+    "Plantas eléctricas Pasto"
+  ],
   openGraph: {
     title: `${site.name} | Soluciones Electromecánicas y Automatización`,
     description: site.description,
