@@ -11,10 +11,10 @@ export function Process() {
         <MotionReveal>
           <SectionHeading {...sectionHeadings.process} />
         </MotionReveal>
-        <MotionReveal stagger className="relative mt-14 grid gap-6 lg:grid-cols-4">
-          <div className="absolute left-0 right-0 top-8 hidden h-px bg-industrial-blue/20 lg:block" />
+        <MotionReveal stagger className="relative mt-14 grid gap-10 lg:grid-cols-4 lg:gap-6">
+          <div className="absolute left-8 right-8 top-14 hidden h-px bg-industrial-blue/20 lg:block" />
           {processSteps.map((step, index) => (
-            <MotionItem key={step.title} variants={fadeInUp} className="relative rounded-xl border border-slate-200 bg-white p-6 shadow-soft">
+            <MotionItem key={step.title} variants={fadeInUp} className="relative pt-6">
               <div className="flex h-16 w-16 items-center justify-center rounded-full border-8 border-technical-white bg-industrial-blue text-xl font-black text-white">
                 {index + 1}
               </div>
