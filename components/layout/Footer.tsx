@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Container } from "@/components/ui/Container";
 import { navItems, site } from "@/lib/constants";
 
@@ -8,7 +9,15 @@ export function Footer() {
       <Container>
         <div className="grid gap-10 md:grid-cols-[1.4fr_1fr_1fr]">
           <div>
-            <p className="text-2xl font-black">{site.name}</p>
+            <div className="bg-white/95 p-2 rounded-lg inline-flex items-center justify-center shadow-sm">
+              <Image 
+                src="/logo-electrotech.png" 
+                alt="ElectroTech Logo" 
+                width={180} 
+                height={45}
+                className="h-10 w-auto object-contain"
+              />
+            </div>
             <p className="mt-4 max-w-md text-sm leading-6 text-white/70">{site.description}</p>
           </div>
           <div>
