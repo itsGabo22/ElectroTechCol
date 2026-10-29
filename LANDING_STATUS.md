@@ -13,10 +13,8 @@ El sitio no solo funciona como un escaparate comercial con animaciones y diseño
 *   **Dominio Oficial:** `electrotechpasto.com` (Registrado y gestionado en Hostinger).
 *   **Hosting Web:** **Vercel** (Conectado vía GitHub y DNS apuntando desde Hostinger mediante registros A y CNAME).
     *   *Estado:* ✅ **Activo y En línea**.
-*   **Correo Entrante:** `contacto@electrotechpasto.com`.
-    *   *Estado:* ✅ **Activo**. (Registros MX y TXT/SPF intactos en Hostinger; bandeja habilitada para recibir correos).
-*   **Correo Saliente (Formulario Web):** **Resend API**.
-    *   *Estado:* ⏳ **Pendiente de Propagación DNS**. (Registros agregados en Hostinger; en espera de que Resend cambie el estado a "Verified" para evitar caer en Spam).
+*   **Correo de Recepción Oficial:** `carlosapazb@hotmail.com`.
+*   **Correo Saliente (Formulario Web):** **Resend API** (envía desde `no-reply@electrotechpasto.com` hacia `carlosapazb@hotmail.com` y autorresponde al cliente).
 
 ---
 
@@ -68,6 +66,6 @@ El portafolio de proyectos dejó de ser estático y ahora es **dinámico**.
 
 ## 6. Próximos Pasos Recomendados
 
-1.  **Verificar Resend:** Monitorear el panel de Resend hasta que los DNS verifiquen el dominio, y luego hacer una prueba real enviando un mensaje desde el formulario web para confirmar que llegue a `contacto@electrotechpasto.com`.
+1.  **Verificar Resend:** Confirmar que las solicitudes enviadas desde el formulario web lleguen a `carlosapazb@hotmail.com`.
 2.  **Llenar el Portafolio:** Recopilar fotos y descripciones de trabajos reales, arrancar Sanity localmente (`npx sanity start`) y comenzar a crear documentos de tipo "Proyecto" para que se reflejen en la web.
 3.  **Monitoreo SEO:** Registrar el dominio en **Google Search Console** utilizando el sitemap autogenerado.

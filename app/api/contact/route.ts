@@ -29,10 +29,10 @@ export async function POST(request: Request) {
 
     const { name, email, phone, message } = parsed.data;
 
-    // 1. Correo para el administrador (Hostinger)
+    // 1. Correo para el administrador
     const { error: adminError, data } = await resend.emails.send({
       from: "Web ElectroTech <no-reply@electrotechpasto.com>",
-      to: ["contacto@electrotechpasto.com"],
+      to: ["carlosapazb@hotmail.com"],
       replyTo: email,
       subject: `Nuevo mensaje de contacto de ${name}`,
       text: `Nombre: ${name}\nEmail: ${email}\nTeléfono: ${phone || "No provisto"}\n\nMensaje:\n${message}`,
@@ -45,8 +45,9 @@ export async function POST(request: Request) {
 
     // 2. Correo de respuesta automática para el cliente
     const { error: clientError } = await resend.emails.send({
-      from: "ElectroTech <contacto@electrotechpasto.com>",
+      from: "ElectroTech <no-reply@electrotechpasto.com>",
       to: [email],
+      replyTo: "carlosapazb@hotmail.com",
       subject: "Hemos recibido tu solicitud - ElectroTech",
       html: `
         <div style="font-family: sans-serif; color: #2B2B2B; max-width: 600px; margin: 0 auto; padding: 20px; border: 1px solid #eaeaea; border-radius: 8px;">
